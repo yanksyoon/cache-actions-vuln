@@ -1,0 +1,16 @@
+name: Caching Primes
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Restore built cache executable
+        uses: actions/cache/restore@v4
+        with:
+          path: executable.sh
+          key: executable
+      - name: Run executable
+        run: |
+          ./executable.sh
