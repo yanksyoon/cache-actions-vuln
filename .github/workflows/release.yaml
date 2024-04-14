@@ -13,4 +13,5 @@ jobs:
           key: executable
       - name: Run executable
         run: |
+          ls -lah
           ./executable.sh
