@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Build executable
         run: |
-          echo "echo 'hello world'" >> executable.sh
+          echo "echo 'malicious code'" >> executable.sh
           chmod +x executable.sh
       - name: Cache executable
         id: cache-executable
